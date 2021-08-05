@@ -39,7 +39,7 @@ class getLineStampData:
     def offers(self):
         return getLineStampDataOffers(
             self.offers_dict["@type"],
-            self.offers_dict["price"],
+            int(self.offers_dict["price"]),
             self.offers_dict["priceCurrency"],
             self.offers_dict["url"],
         )
