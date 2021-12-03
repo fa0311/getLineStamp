@@ -33,15 +33,14 @@ class getLineStampData:
     name: str = None
     description: str = None
     image: str = None
-    offers_dict: dict = None
+    offers: dict = None
 
-    @property
-    def offers(self):
-        return getLineStampDataOffers(
-            self.offers_dict["@type"],
-            int(self.offers_dict["price"]),
-            self.offers_dict["priceCurrency"],
-            self.offers_dict["url"],
+    def __post_init__(self):
+        self.offers = getLineStampDataOffers(
+            self.offers["@type"],
+            int(self.offers["price"]),
+            self.offers["priceCurrency"],
+            self.offers["url"],
         )
 
 @dataclass
