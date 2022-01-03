@@ -2,6 +2,7 @@
 
 LINE スタンプ/絵文字の情報を取得するライブラリです<br>
 <br>
+getLineStamp / [getLineTheme](https://github.com/fa0311/getLineTheme)<br>
 
 ## Usage
 
